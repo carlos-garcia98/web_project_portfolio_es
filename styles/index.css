@@ -8,5 +8,14 @@ body {
   background-color: #111;
   color: #fff;
   max-width: 1440px;
+  min-width: 320px;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    outline: 1px solid blue;
+    margin: 0 auto;
+    width: 100%;
+  }
 }

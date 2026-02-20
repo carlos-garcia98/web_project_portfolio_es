@@ -26,7 +26,7 @@
 
 .main-content__projects-container {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .project-card {
@@ -65,8 +65,12 @@
   aspect-ratio: 1 / 1;
 }
 
-.project-card__project-information {
+.project-card__information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 20px;
+  height: 100%;
 }
 
 .project-card__title {

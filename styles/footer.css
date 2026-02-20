@@ -1,6 +1,8 @@
 .footer {
   padding-top: 80px;
   padding-bottom: 53px;
+  margin-left: 120px;
+  margin-right: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
