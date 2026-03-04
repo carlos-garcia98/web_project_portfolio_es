@@ -14,8 +14,16 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    outline: 1px solid blue;
-    margin: 0 auto;
-    width: 100%;
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    outline: 1px solid red;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

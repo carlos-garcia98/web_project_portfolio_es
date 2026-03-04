@@ -8,17 +8,14 @@
 }
 
 .header__content-container {
-  max-width: 793px;
-  min-height: 441px;
-  min-width: 280px;
-  max-height: 667px;
+  width: clamp(280px, 100%, 798px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .header__title {
-  font-size: 72px;
+  font-size: clamp(36px, 58px, 72px);
   font-family: "ArchivoBlack", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -66,11 +63,15 @@
 
 .header__image-container {
   position: relative;
-  max-height: 500px;
+  /* width: clamp(216px, 50%, 387px); */
+  /* height: clamp(280px, 50%, 500px); */
+  max-width: 387px;
+  /* min-width: 216px; */
 }
 
 .header__image {
-  max-width: 387px;
+  /* max-width: 387px; */
+  width: 100%;
   position: relative;
   z-index: 10;
 }
@@ -82,25 +83,84 @@
   border-radius: 50%;
   bottom: 0;
   left: 0;
+  background-color: #6d6dff47;
   box-shadow: 0 0 300px #6d6dff;
 }
 
 @media screen and (max-width: 768px) {
   .header {
-    outline: 1px solid red;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  .header__subheading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .header__image-container {
+    margin-top: 40px;
+    max-width: 216px;
+    max-height: 280px;
+  }
+
+  .header__image {
     width: 100%;
   }
 
-  .header__title {
-    font-size: 58px;
+  .header__eclipse {
+    left: -60px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .header {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    width: 300px;
+    padding-top: 20px;
   }
+
+  .header__content-container {
+    position: relative;
+    z-index: 10;
+  }
+
   .header__title {
-    font-size: 38px;
+    margin-top: 0;
+    font-size: 36px;
+  }
+
+  .header__subheading {
+    font-size: 16px;
+  }
+
+  .header__description {
+    font-size: 16px;
+  }
+
+  .header__image-container {
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    align-self: center;
+  }
+
+  .header__image {
+    aspect-ratio: 1 / 1;
+  }
+
+  .header__eclipse {
+    left: -19px;
+    bottom: -20px;
+  }
+
+  .header__links {
+    flex-direction: column;
+    gap: 25px;
   }
 }
