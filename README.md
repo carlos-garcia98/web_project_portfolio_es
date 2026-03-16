@@ -1,4 +1,4 @@
-# web_project_potrfolio_es
+# web_project_portfolio_es
 ## Project description
 In this project (part of the Tripleten bootcamp) I created a portfolio page where I show some information about me, the technologies I know and i have been practicing, the projects I have made and a contact section.
 
